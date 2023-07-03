@@ -1,4 +1,4 @@
-interface Vocab {
+export interface Vocab {
 	id: number
 	value: string
 	partOfSpeech: PartOfSpeech
