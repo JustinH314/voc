@@ -1,11 +1,13 @@
 export interface Vocab {
 	id: number
+
+	// NOTE: case-sensitive
 	value: string
 	partOfSpeech: PartOfSpeech
 	translation: string[]
-	createdAt: string
-	updatedAt: string
-	freq: number
+	createdAt: Date
+	updatedAt: Date
+	count: number
 	difficulty: Difficulty
 	common: boolean
 }
