@@ -1,6 +1,6 @@
 import { Vocab } from './vocab'
 
-const terms: Vocab[] = [
+export const terms: Vocab[] = [
 	{
 		id: 1,
 		partOfSpeech: 'noun',
