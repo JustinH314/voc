@@ -1,10 +1,12 @@
 import '@/styles/app.css'
 import { terms } from './data/mock'
 import { Vocab } from './data/vocab'
+import { MagicBox } from './components'
 
 function App() {
 	return (
 		<>
+			<MagicBox />
 			<button onClick={() => alert('hello')}>Add</button>
 			{terms.map((voc) => {
 				return <Card {...voc} />
