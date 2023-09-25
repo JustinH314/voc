@@ -4,9 +4,9 @@ import { Form } from './components'
 
 function App() {
 	return (
-		<>
+		<div className="p-4 bg-sky-500 w-[590px]">
 			<Form />
-		</>
+		</div>
 	)
 }
 

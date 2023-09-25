@@ -26,7 +26,9 @@ export default function Form() {
 					<option value="adverb">Adverb</option>
 				</select>
 			</fieldset>
-			<button type="submit">submit</button>
+			<button type="submit" className=" px-10 bg-teal-200">
+				submit
+			</button>
 		</form>
 	)
 }
