@@ -3,10 +3,11 @@ from dotenv import load_dotenv
 from fastapi.middleware.cors import CORSMiddleware
 from pymongo import MongoClient
 from routers.term import term_router
-# from config import MONGODB_URI, DATABASE_NAME
+from config import MONGODB_URI, DATABASE_NAME
 
 
 load_dotenv()
+print(MONGODB_URI)
 
 app = FastAPI()
 
