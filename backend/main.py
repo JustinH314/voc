@@ -29,7 +29,15 @@ def root():
         "message": "it works"
     }
 
+@app.on_event("startup")
+def startup_db_client():
+    app.mongodb_client = MongoClient(MONGODB_URI)
+    app.database = app.mongodb_client[DATABASE_NAME]
+    print(app.database)
+
+
 app.include_router(term_router, tags=["Term"], prefix="/term")
+
 
 if __name__ == "__main__":
     import uvicorn
