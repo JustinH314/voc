@@ -16,3 +16,8 @@ def term_root():
 def get_all_terms(request: Request):
     terms = request.app.database[DEFAULT_COLLECTION_NAME].find()
     return terms
+
+@term_router.post("/add-new-term")
+def add_new_term(request: Request, term: TermModel=Body()):
+    term = jsonable_encoder(term)
+    request.app.database[DEFAULT_COLLECTION_NAME].insert_one(term)
