@@ -33,6 +33,7 @@ def root():
 def startup_db_client():
     app.mongodb_client = MongoClient(MONGODB_URI)
     app.database = app.mongodb_client[DATABASE_NAME]
+    app.terms = app.database["terms"]
     print(app.database)
 
 
